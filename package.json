@@ -1,0 +1,28 @@
+{
+  "name": "node-express-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server -d --color --port 8000 --progress --watch",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "serve": "webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.0.1",
+    "morgan": "^1.9.0",
+    "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}

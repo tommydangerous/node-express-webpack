@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server -d --color --port 8000 --progress --watch",
+    "start": "node server.js",
     "build": "webpack",
     "watch": "webpack --watch",
-    "serve": "webpack-dev-server --open"
+    "serve": "webpack-dev-server --open",
+    "dev": "webpack-dev-server -d --color --port 8000 --progress --watch"
   },
   "author": "",
   "license": "ISC",

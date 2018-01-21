@@ -1,6 +1,6 @@
 var Data = {
   layout: {
-    title: 'Coin Trade',
+    title: 'Boiler plate',
   },
 };
 

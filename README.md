@@ -10,3 +10,10 @@ Open sample page
 ```
 $ open dist/index.html
 ```
+
+Start Node server
+```
+$ npm run start
+```
+
+Visit http://localhost:8080/

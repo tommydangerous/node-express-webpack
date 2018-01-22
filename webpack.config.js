@@ -1,11 +1,13 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProduction = nodeEnv === 'production';
 
 module.exports = {
   entry: [
-    './src/index.jsx',
+    './src/index.js',
     './src/index.scss',
   ],
   output: {
@@ -15,10 +17,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js[x]?$/,
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /\.jsx?$/,
+        use: [
+          'babel-loader',
+        ],
+        exclude: /(node_modules|bower_components)/,
+      },
+      {
+        test: /\.js$/,
+        use: [
+          'babel-loader',
+        ],
         exclude: /(node_modules|bower_components)/,
       },
       {

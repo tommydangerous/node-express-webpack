@@ -3,12 +3,11 @@
 Setup
 ```
 $ npm install --registry https://registry.npmjs.org/
-$ npm run watch
 ```
 
-Open sample page
+Start Webpack
 ```
-$ open dist/index.html
+$ npm run watch
 ```
 
 Start Node server

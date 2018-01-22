@@ -1,4 +1,6 @@
+import { render } from 'react-dom';
 import _ from 'lodash';
+import React from 'react';
 
 function component() {
   var element = document.createElement('div');

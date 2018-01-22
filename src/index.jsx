@@ -2,6 +2,8 @@ import { render } from 'react-dom';
 import _ from 'lodash';
 import React from 'react';
 
+import SampleApp from './components/SampleApp';
+
 function component() {
   var element = document.createElement('div');
 
@@ -12,3 +14,8 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+render(
+  <SampleApp />,
+  document.getElementById('page-app'),
+);

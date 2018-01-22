@@ -7,19 +7,30 @@ const isProduction = nodeEnv === 'production';
 
 module.exports = {
   entry: [
-    './src/index.js',
+    './src/index.jsx',
     './src/index.scss',
   ],
   output: {
     filename: 'js/bundle.js',
     path: path.resolve(__dirname, 'public', nodeEnv),
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
+  },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         use: [
-          'babel-loader',
+          {
+            loader: 'babel-loader',
+            query: {
+              presets: [
+                'es2015',
+                'react',
+              ],
+            },
+          },
         ],
         exclude: /(node_modules|bower_components)/,
       },
